@@ -25,39 +25,11 @@
       crossorigin="anonymous"
     ></script>
 
-    <style>
+    <!-- Cargar Static -->
+    {% load static %}
 
-      body {
-        background-color: rgba(14, 58, 77, 0.836);
-        margin: 5%;
-      }
-
-      h1 {
-        text-align: center;
-        margin-bottom: 3%;
-        color: azure;
-        font-weight: bold;
-        font-size: 50px;
-        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        text-decoration: underline;
-      }
-
-      .table-container {
-        overflow-x:auto;
-      }
-
-      .table-striped {
-        background-color: azure;
-        border: 2px solid black;
-        text-align: center;
-        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-      }
-
-      .table-striped th, .table-striped td {
-        border: 1px solid black !important;
-      }
-      
-    </style>
+    <!-- Mi hoja de estilos CSS -->
+    <link rel="stylesheet" href="{% static 'alumnos/css/styles.css' %}">
 
   </head>
 
@@ -108,5 +80,8 @@
           </tbody>
         </table>
     </div>
+
+    <img src="{% static 'alumnos/img/logodeprueba.jpg' %}" alt="My image">
+
   </body>
 </html>
