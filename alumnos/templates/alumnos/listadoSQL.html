@@ -37,7 +37,17 @@
   </head>
 
   <body>
-    <h1>Listado de Alumnos</h1>
+    <header>
+      <div class="row justify-content-center">
+        <div class="col-md-4 col-sm-12">
+          <img src="{% static 'img/logodeprueba.jpg' %}" alt="logodeprueba">
+        </div>
+        <div class="col-md-8 col-sm-12">
+          <h1>Listado de Alumnos</h1>
+        </div>
+      </div>   
+    </header>
+    
 
     <div class="table-container">
         <table class="table table-striped">
@@ -83,8 +93,5 @@
           </tbody>
         </table>
     </div>
-
-    <img src="{% static 'img/logodeprueba.jpg' %}" alt="My image">
-
   </body>
 </html>

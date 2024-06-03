@@ -3,8 +3,14 @@ body {
     margin: 5%;
   }
 
-  h1 {
-    text-align: center;
+header .row {
+    margin-bottom: 3%;
+    vertical-align: middle;
+    align-items: center;
+}
+
+header h1 {
+    text-align: left;
     margin-bottom: 3%;
     color: azure;
     font-weight: bold;
@@ -13,17 +19,22 @@ body {
     text-decoration: underline;
   }
 
-  .table-container {
+header img {
+   width: 100%;
+   height: auto;
+ }
+
+.table-container {
     overflow-x:auto;
   }
 
-  .table-striped {
+.table-striped {
     background-color: azure;
     border: 2px solid black;
     text-align: center;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
 
-  .table-striped th, .table-striped td {
+.table-striped th, .table-striped td {
     border: 1px solid black !important;
   }
