@@ -24,6 +24,13 @@ header img {
    height: auto;
  }
 
+#btnAgregar {
+  margin-bottom: 2%;
+  font-size: 20px;
+  font-weight: bold;
+  color: rgba(14, 58, 77, 0.836);;
+}
+
 .table-container {
     overflow-x:auto;
   }
