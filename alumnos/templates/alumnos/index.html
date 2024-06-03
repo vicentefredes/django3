@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alumnos</title>
 
+    <!-- Cargar Static -->
+    {% load static %}  
+
     <!-- JQuery -->
     <script
       src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -25,11 +28,11 @@
       crossorigin="anonymous"
     ></script>
 
-    <!-- Cargar Static -->
-    {% load static %}
-
     <!-- Mi hoja de estilos CSS -->
-    <link rel="stylesheet" href="{% static 'alumnos/css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <!-- Mi archivo JS -->
+    <script src="{% static 'js/main.js' %}"></script>
 
   </head>
 
@@ -81,7 +84,7 @@
         </table>
     </div>
 
-    <img src="{% static 'alumnos/img/logodeprueba.jpg' %}" alt="My image">
+    <img src="{% static 'img/logodeprueba.jpg' %}" alt="logodeprueba" width="30%" height="auto">
 
   </body>
 </html>
