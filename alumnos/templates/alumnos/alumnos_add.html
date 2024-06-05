@@ -64,16 +64,19 @@
 
         <br>
 
-        <a href="{% url 'crud' %}">Volver</a>
+        <div id="idMensajes">
+            {% if mensaje %}
+                <div class="alert alert-success">
+                    {{ mensaje }}
+                </div>
+            {% endif %}
+        </div>
 
         <br>
 
-        {% comment %} <div id="idMensajes">
-            {% if mensaje %}
-                {{mensaje}}
-            {% endif%}
-        </div> {% endcomment %}
+        <a href="{% url 'crud' %}">Volver</a>
 
+        
     </div>
     
 </body>
