@@ -1,47 +1,73 @@
 body {
-    background-color: rgba(14, 58, 77, 0.836);
-    margin: 5%;
-  }
+  background-color: rgba(14, 58, 77, 0.836);
+  margin: 5%;
+}
 
 header .row {
-    margin-bottom: 3%;
-    vertical-align: middle;
-    align-items: center;
+  margin-bottom: 3%;
+  vertical-align: middle;
+  align-items: center;
 }
 
 header h1 {
-    text-align: left;
-    margin-bottom: 3%;
-    color: azure;
-    font-weight: bold;
-    font-size: 50px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-decoration: underline;
-  }
+  text-align: left;
+  margin-bottom: 3%;
+  color: azure;
+  font-weight: bold;
+  font-size: 50px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-decoration: underline;
+}
 
 header img {
-   width: 100%;
-   height: auto;
+  width: 100%;
+  height: auto;
  }
 
 #btnAgregar {
   margin-bottom: 2%;
   font-size: 20px;
   font-weight: bold;
-  color: rgba(14, 58, 77, 0.836);;
+  color: rgba(14, 58, 77, 0.836);
 }
 
 .table-container {
-    overflow-x:auto;
-  }
+  overflow-x:auto;
+}
 
 .table-striped {
-    background-color: azure;
-    border: 2px solid black;
-    text-align: center;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
+  background-color: azure;
+  border: 2px solid black;
+  text-align: center;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
 
 .table-striped th, .table-striped td {
-    border: 1px solid black !important;
+  border: 1px solid black !important;
+}
+
+#formCrudAlumnos {
+  background-color: azure;
+  color: rgba(14, 58, 77, 0.836);
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 500;
+}
+
+#formCrudAlumnos h2 {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#btnEnviarForm, #btnVolver {
+  width: 30%;
+  margin-left: 2%;
+  margin-right: 2%;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+@media (max-width: 450px) {
+  #btnEnviarForm, #btnVolver {
+    width: 45%;
   }
+}

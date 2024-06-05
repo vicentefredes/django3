@@ -37,47 +37,82 @@
 </head>
 <body>
 
-    <div id="formCrudAlumnos">
-        <h2>Agregar Alumno: </h2>
-        <br>
+    <div class="row justify-content-center">
+        <div class="col-lg-8 col-md-10 col-sm-12">
+            <div id="formCrudAlumnos" class="p-4 border rounded">
+                <h2 class="text-center">Agregar Alumno: </h2>
+                <br>
+                <form action="alumnosAdd" method="POST">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="rut">RUT:</label>
+                            <input type="text" class="form-control" id="rut" name="rut">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="apaterno">Apellido Paterno:</label>
+                            <input type="text" class="form-control" id="apaterno" name="apaterno">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="amaterno">Apellido Materno:</label>
+                            <input type="text" class="form-control" id="amaterno" name="amaterno">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-4">
+                            <label for="fechaNac">Fecha de Nacimiento:</label>
+                            <input type="date" class="form-control" id="fechaNac" name="fechaNac">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="genero">Género:</label>
+                            <select class="form-control" id="genero" name="genero">
+                                {% for genero in generos %}
+                                    <option value="{{ genero.id_genero }}">{{ genero.genero }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label for="telefono">Teléfono:</label>
+                            <input type="text" class="form-control" id="telefono" name="telefono">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="direccion">Dirección:</label>
+                            <input type="text" class="form-control" id="direccion" name="direccion">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="email">E-mail:</label>
+                            <input type="email" class="form-control" id="email" name="email">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        
+                    </div>
+                    <br>
+                    <div class="form-group text-center">
+                        <button type="submit" class="btn btn-primary" id="btnEnviarForm">Agregar</button>
+                        <a href="{% url 'crud' %}" class="btn btn-secondary" id="btnVolver">Volver</a>
+                    </div>
+                </form>
 
-        <form action="alumnosAdd" method="POST">
-            {% csrf_token %}
-
-            <pre>RUT:                       <input type="text" name="rut"      ></pre>
-            <pre>Nombre:                    <input type="text" name="nombre"   ></pre>
-            <pre>Apellido Paterno:          <input type="text" name="apaterno" ></pre>
-            <pre>Apellido Materno:          <input type="text" name="amaterno" ></pre>
-            <pre>Fecha de Nacimiento:       <input type="date" name="fechaNac" ></pre>
-            <pre>Género:                    <select name="genero">
-                {% for genero in generos %}
-                    <option value="{{genero.id_genero}}">{{genero.genero}}</option>
-                {% endfor %}
-            </select> </pre>
-            <pre>Teléfono:                  <input type="text" name="telefono" ></pre>
-            <pre>E-mail:                    <input type="mail" name="email"    ></pre>
-            <pre>Dirección:                 <input type="text" name="direccion"></pre>
-
-            <input type="submit" name="opcion" value="Agregar">
-
-        </form>
-
-        <br>
-
-        <div id="idMensajes">
-            {% if mensaje %}
-                <div class="alert alert-success">
-                    {{ mensaje }}
+                <div id="idMensajes">
+                    {% if mensaje %}
+                        <div class="alert alert-success">
+                            {{ mensaje }}
+                        </div>
+                    {% endif %}
                 </div>
-            {% endif %}
+            </div>
         </div>
-
-        <br>
-
-        <a href="{% url 'crud' %}">Volver</a>
-
-        
     </div>
+    
     
 </body>
 </html>
