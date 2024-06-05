@@ -15793,3 +15793,207 @@ Traceback (most recent call last):
 django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: '68cdO52o3NY6OXNEkDNBPTeyiZLLl0h7o0HF5JEfSCxpWuvalkdBzXk33p3ZVX5H'>, 'request': <WSGIRequest: GET '/alumnos/alumnosAdd'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000001A3C8BB5800>>, 'perms': PermWrapper(<SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000001A3C8BB5800>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/alumnosAdd'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'generos': <QuerySet [<Genero: Masculino>, <Genero: Femenino>]>}]
 "GET /alumnos/alumnosAdd HTTP/1.1" 200 4996
 "GET /static/css/styles.css HTTP/1.1" 304 0
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero"; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/alumnos_add.html'.
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 880, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python311\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 886, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: '980ENygsOergJFCR81K3qjT5zAQM4VEGr0v64cSjD30zRckn9Ia3anZAk080ESsg'>, 'request': <WSGIRequest: GET '/alumnos/alumnosAdd'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000001A3C8BB62A0>>, 'perms': PermWrapper(<SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000001A3C8BB62A0>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/alumnosAdd'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'generos': <QuerySet [<Genero: Masculino>, <Genero: Femenino>]>}]
+"GET /alumnos/alumnosAdd HTTP/1.1" 200 4996
+"GET /static/css/styles.css HTTP/1.1" 200 1445
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero"; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/alumnos_add.html'.
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 880, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python311\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 886, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'Ja2mOBd2MOQWPFA46lErNIzx1xQmup6l12xO5fPTBDpfXciA724rxMF2MX8A4mUV'>, 'request': <WSGIRequest: GET '/alumnos/alumnosAdd'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000001A3C8BB5120>>, 'perms': PermWrapper(<SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000001A3C8BB5120>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/alumnosAdd'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'generos': <QuerySet [<Genero: Masculino>, <Genero: Femenino>]>}]
+"GET /alumnos/alumnosAdd HTTP/1.1" 200 4996
+"GET /static/css/styles.css HTTP/1.1" 304 0
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero"; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/alumnos_add.html'.
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 880, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python311\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 886, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'HyevzulijHCAWXENudLc8DeR08ZD0eoSZqJXQ8X98wbT4umjvUbcSHkmLyhRAbcs'>, 'request': <WSGIRequest: GET '/alumnos/alumnosAdd'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000001A3C8BB5EE0>>, 'perms': PermWrapper(<SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000001A3C8BB5EE0>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/alumnosAdd'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'generos': <QuerySet [<Genero: Masculino>, <Genero: Femenino>]>}]
+"GET /alumnos/alumnosAdd HTTP/1.1" 200 4996
+"GET /static/css/styles.css HTTP/1.1" 200 1445
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero"; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/alumnos_add.html'.
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 880, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python311\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 886, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'ulJFYNTz2gPxq2prfKVowVuNTXbSzg12Mde7frvqR5oQyz7XgrlogZAiEnt69dPC'>, 'request': <WSGIRequest: GET '/alumnos/alumnosAdd'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000001A3C8BB5440>>, 'perms': PermWrapper(<SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000001A3C8BB5440>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/alumnosAdd'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'generos': <QuerySet [<Genero: Masculino>, <Genero: Femenino>]>}]
+"GET /alumnos/alumnosAdd HTTP/1.1" 200 4996
+"GET /static/css/styles.css HTTP/1.1" 304 0
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero"; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/alumnos_add.html'.
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 880, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python311\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 886, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'axe1kB1a1dWxaXolk3cC1HDxvrXWHPTcspJtBfD1Q2vQiu6RlKCCLLJ2gRfahMHM'>, 'request': <WSGIRequest: GET '/alumnos/alumnosAdd'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000001A3C74E2700>>, 'perms': PermWrapper(<SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000001A3C74E2700>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/alumnosAdd'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'generos': <QuerySet [<Genero: Masculino>, <Genero: Femenino>]>}]
+"GET /alumnos/alumnosAdd HTTP/1.1" 200 4996
+"GET /static/css/styles.css HTTP/1.1" 200 1445
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero"; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/alumnos_add.html'.
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 880, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python311\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 886, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'kMvbnkWBQ5hV7JSCq61oxPCZDVDsATWTCE0DEYysFUQefgA8rNrohTIuolVGaQKt'>, 'request': <WSGIRequest: GET '/alumnos/alumnosAdd'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000001A3C8BB54E0>>, 'perms': PermWrapper(<SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000001A3C8BB54E0>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/alumnosAdd'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'generos': <QuerySet [<Genero: Masculino>, <Genero: Femenino>]>}]
+"GET /alumnos/alumnosAdd HTTP/1.1" 200 4996
+"GET /static/css/styles.css HTTP/1.1" 304 0
