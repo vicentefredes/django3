@@ -46,22 +46,22 @@
           <h1>Listado de Alumnos</h1>
         </div>
         <div class="col-md-3 col-sm-12">
-          <button class="btn btn-light" id="btnAgregar">
-            <a href="{% url 'alumnosAdd' %}">Agregar Alumno</a>
-          </button>
+          <div class="container-btn">
+            <button class="btn btn-light" id="btnAgregar">
+              <a href="{% url 'alumnosAdd' %}">Agregar Alumno</a>
+            </button>
+          </div>
         </div>
       </div>   
     </header>
 
-    
-
     <div id="idMensajes">
       {% if mensaje %}
-          <div class="alert alert-light">
+          <div class="alert alert-light mx-auto">
               {{ mensaje }}
           </div>
       {% endif %}
-  </div>
+    </div>
 
     <div class="table-container">
         <table class="table table-striped">
@@ -74,39 +74,38 @@
                     <th scope="col">Nacimiento</th>
                     <th scope="col">E-mail</th>
                     <th scope="col">Estado</th>
-                    <th scope="col">Modificar</th>
-                    <th scope="col">Eliminar</th>
+                    <th scope="col" colspan="2">Acción</th>
                     </tr>
                 </thead>
                 <tbody>
                     {% for alumno in alumnos %}
 
-                    {% if alumno.rut %}
-                    <tr>
-                        <td>{{ alumno.rut }}</td>
-                        <td>{{ alumno.nombre|capfirst }} {{ alumno.apellido_paterno|capfirst }} {{ alumno.apellido_materno|capfirst }}</td>
-                        <td>{{ alumno.id_genero.genero|slice:":1" }}</td>
-                        <td>{{ alumno.fecha_nacimiento|date:"d/m/Y" }}</td>
-                        <td>{{ alumno.email|default_if_none:""|lower }}</td>
-                        <td>
-                            {% if alumno.activo %}
-                            {% if alumno.id_genero.genero == "Masculino" %}
-                                Activo
-                            {% else %}
-                                Activa
-                            {% endif %}
-                            {% else %}
-                            {% if alumno.id_genero.genero == "Masculino" %}
-                                Inactivo
-                            {% else %}
-                                Inactiva
-                            {% endif %}
-                            {% endif %}
-                        </td>
-                        <td><a href="{% url 'alumnos_findEdit' pk=alumno.rut %}">Modificar</a></td>
-                        <td><a href="{% url 'alumnos_del' pk=alumno.rut %}">Eliminar</a></td>
-                    </tr>
-                    {% endif %} 
+                      {% if alumno.rut %}
+                      <tr>
+                          <td>{{ alumno.rut }}</td>
+                          <td>{{ alumno.nombre|capfirst }} {{ alumno.apellido_paterno|capfirst }} {{ alumno.apellido_materno|capfirst }}</td>
+                          <td>{{ alumno.id_genero.genero|slice:":1" }}</td>
+                          <td>{{ alumno.fecha_nacimiento|date:"d/m/Y" }}</td>
+                          <td>{{ alumno.email|default_if_none:""|lower }}</td>
+                          <td class="{% if alumno.activo %}activo{% else %}inactivo{% endif %}">
+                              {% if alumno.activo %}
+                                {% if alumno.id_genero.genero == "Masculino" %}
+                                    Activo
+                                {% else %}
+                                    Activa
+                                {% endif %}
+                              {% else %}
+                                {% if alumno.id_genero.genero == "Masculino" %}
+                                    Inactivo
+                                {% else %}
+                                    Inactiva
+                                {% endif %}
+                              {% endif %}
+                          </td>
+                          <td class="td-update"><a href="{% url 'alumnos_findEdit' pk=alumno.rut %}">Modificar</a></td>
+                          <td class="td-delete"><a href="{% url 'alumnos_del' pk=alumno.rut %}">Eliminar</a></td>
+                      </tr>
+                      {% endif %} 
                     {% endfor %}
                 </tbody>
             {% endif %}    

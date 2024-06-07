@@ -132,7 +132,12 @@ def alumnos_del(request, pk):
         alumno = Alumno.objects.get(rut=pk)
 
         alumno.delete()
-        mensaje = f"{alumno.nombre} {alumno.apellido_paterno} {alumno.apellido_materno} ha sido eliminado"
+
+        if alumno.id_genero.genero == "Masculino":
+            mensaje = f"{alumno.nombre} {alumno.apellido_paterno} {alumno.apellido_materno} ha sido eliminado"
+        else:
+            mensaje = f"{alumno.nombre} {alumno.apellido_paterno} {alumno.apellido_materno} ha sido eliminada"
+
         alumnos = Alumno.objects.all()
         context = {'alumnos': alumnos, 'mensaje': mensaje}
         return render(request, 'alumnos/alumnos_list.html', context)
