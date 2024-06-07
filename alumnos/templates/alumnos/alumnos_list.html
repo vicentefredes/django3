@@ -97,7 +97,7 @@
                             {% endif %}
                         </td>
                         <td> {% comment "" %}<a href="{% url 'alumnos_findEdit' pk=alumno.rut %}">Modificar</a>{% endcomment %} Modificar</td>
-                        <td> {% comment "" %}<a href="{% url 'alumnos_del' pk=alumno.rut %}">Eliminar</a>{% endcomment %} Eliminar</td>
+                        <td><a href="{% url 'alumnos_del' pk=alumno.rut %}">Eliminar</a></td>
                     </tr>
                     {% endfor %}
                 </tbody>
