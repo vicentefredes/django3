@@ -42,21 +42,26 @@
         <div class="col-md-4 col-sm-12">
           <img src="{% static 'img/logodeprueba.jpg' %}" alt="logodeprueba">
         </div>
-        <div class="col-md-8 col-sm-12">
+        <div class="col-md-5 col-sm-12">
           <h1>Listado de Alumnos</h1>
+        </div>
+        <div class="col-md-3 col-sm-12">
+          <button class="btn btn-light" id="btnAgregar">
+            <a href="{% url 'alumnosAdd' %}">Agregar Alumno</a>
+          </button>
         </div>
       </div>   
     </header>
 
-    <button class="btn btn-light" id="btnAgregar">
-        <a href="{% url 'alumnosAdd' %}">Agregar Alumno</a>
-    </button>
+    
 
     <div id="idMensajes">
-        {% if mensaje %}
-            {{mensaje}}
-        {% endif%}
-    </div>
+      {% if mensaje %}
+          <div class="alert alert-light">
+              {{ mensaje }}
+          </div>
+      {% endif %}
+  </div>
 
     <div class="table-container">
         <table class="table table-striped">
