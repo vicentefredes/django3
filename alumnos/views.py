@@ -77,7 +77,7 @@ def alumnos_findEdit(request, pk):
         else:
             mensaje = f"ERROR: el rut {pk} no existe"
             context = {'mensaje': mensaje}
-            return render(request, 'alumnos/alumnos/alumnos_list.html', context)
+            return render(request, 'alumnos/alumnos_list.html', context)
 
 
 def alumnosUpdate(request):
@@ -113,18 +113,15 @@ def alumnosUpdate(request):
         alumno.activo=activo
 
         alumno.save()
-
-        if objGenero.genero == 'Masculino':
-            mensaje = f"{nombre} {apaterno} {amaterno} ha sido agregado exitosamente"
-        else:
-            mensaje = f"{nombre} {apaterno} {amaterno} ha sido agregada exitosamente"
+    
+        mensaje = f"Los datos de {nombre} {apaterno} {amaterno} han sido actualizados exitosamente"
 
         generos = Genero.objects.all()
 
         context = {'mensaje': mensaje, 'generos':generos, 'alumno':alumno}
 
         #return redirect('crud')
-        return render(request, 'alumnos/alumnos_add.html', context)
+        return render(request, 'alumnos/alumnos_edit.html', context)
 
 
 
@@ -138,10 +135,10 @@ def alumnos_del(request, pk):
         mensaje = f"{alumno.nombre} {alumno.apellido_paterno} {alumno.apellido_materno} ha sido eliminado"
         alumnos = Alumno.objects.all()
         context = {'alumnos': alumnos, 'mensaje': mensaje}
-        return render(request, 'alumnos/alumnos/alumnos_list.html', context)
+        return render(request, 'alumnos/alumnos_list.html', context)
     
     except:
         mensaje = f"ERROR: el rut {pk} no existe"
         alumnos = Alumno.objects.all()
         context = {'alumnos': alumnos, 'mensaje': mensaje}
-        return render(request, 'alumnos/alumnos/alumnos_list.html', context)
+        return render(request, 'alumnos/alumnos_list.html', context)

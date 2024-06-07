@@ -49,7 +49,7 @@
     </header>
 
     <button class="btn btn-light" id="btnAgregar">
-        <a href="{% url 'alumnosAdd'%}">Agregar Alumno</a>
+        <a href="{% url 'alumnosAdd' %}">Agregar Alumno</a>
     </button>
 
     <div id="idMensajes">
@@ -75,6 +75,8 @@
                 </thead>
                 <tbody>
                     {% for alumno in alumnos %}
+
+                    {% if alumno.rut %}
                     <tr>
                         <td>{{ alumno.rut }}</td>
                         <td>{{ alumno.nombre|capfirst }} {{ alumno.apellido_paterno|capfirst }} {{ alumno.apellido_materno|capfirst }}</td>
@@ -96,9 +98,10 @@
                             {% endif %}
                             {% endif %}
                         </td>
-                        <td> {% comment "" %}<a href="{% url 'alumnos_findEdit' pk=alumno.rut %}">Modificar</a>{% endcomment %} Modificar</td>
+                        <td><a href="{% url 'alumnos_findEdit' pk=alumno.rut %}">Modificar</a></td>
                         <td><a href="{% url 'alumnos_del' pk=alumno.rut %}">Eliminar</a></td>
                     </tr>
+                    {% endif %} 
                     {% endfor %}
                 </tbody>
             {% endif %}    
