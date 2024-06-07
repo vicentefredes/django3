@@ -37350,3 +37350,233 @@ Traceback (most recent call last):
 django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0000014BA7E0AB60>>, 'request': <WSGIRequest: GET '/alumnos/crud'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x0000014BA7E09940>>, 'perms': PermWrapper(<SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x0000014BA7E09940>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'alumnos': <QuerySet [<Alumno:   >, <Alumno: Salvador Allende Gossens>, <Alumno: Jimena Estuardo Uribe>, <Alumno: Vicente Fredes Estuardo>, <Alumno: Rodrigo Fredes Veas>, <Alumno: Gonzalo Muga Escobar>, <Alumno: Caroline Polachek Lisa>, <Alumno: Natalia Pérez Peralta>, <Alumno: Roberto Smith Poole>, <Alumno: Avril Vandella Lavigne>]>}]
 (0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC; args=(); alias=default
 (0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+"GET /alumnos/crud HTTP/1.1" 200 10087
+"GET /static/css/styles.css HTTP/1.1" 200 2539
+(0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC LIMIT 21; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/alumnos_list.html'.
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 880, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python311\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 886, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0000014BA7E09260>>, 'request': <WSGIRequest: GET '/alumnos/crud'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x0000014BA7E0AB60>>, 'perms': PermWrapper(<SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x0000014BA7E0AB60>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'alumnos': <QuerySet [<Alumno:   >, <Alumno: Salvador Allende Gossens>, <Alumno: Jimena Estuardo Uribe>, <Alumno: Vicente Fredes Estuardo>, <Alumno: Rodrigo Fredes Veas>, <Alumno: Gonzalo Muga Escobar>, <Alumno: Caroline Polachek Lisa>, <Alumno: Natalia Pérez Peralta>, <Alumno: Roberto Smith Poole>, <Alumno: Avril Vandella Lavigne>]>}]
+(0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC; args=(); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+"GET /alumnos/crud HTTP/1.1" 200 10087
+"GET /static/css/styles.css HTTP/1.1" 200 2537
+(0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC LIMIT 21; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/alumnos_list.html'.
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 880, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python311\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 886, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0000014BA7E09800>>, 'request': <WSGIRequest: GET '/alumnos/crud'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x0000014BA6732700>>, 'perms': PermWrapper(<SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x0000014BA6732700>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'alumnos': <QuerySet [<Alumno:   >, <Alumno: Salvador Allende Gossens>, <Alumno: Jimena Estuardo Uribe>, <Alumno: Vicente Fredes Estuardo>, <Alumno: Rodrigo Fredes Veas>, <Alumno: Gonzalo Muga Escobar>, <Alumno: Caroline Polachek Lisa>, <Alumno: Natalia Pérez Peralta>, <Alumno: Roberto Smith Poole>, <Alumno: Avril Vandella Lavigne>]>}]
+(0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC; args=(); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+"GET /alumnos/crud HTTP/1.1" 200 10087
+"GET /static/css/styles.css HTTP/1.1" 200 2559
+(0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC LIMIT 21; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/alumnos_list.html'.
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 880, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python311\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 886, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0000014BA7E0A520>>, 'request': <WSGIRequest: GET '/alumnos/crud'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x0000014BA7E09800>>, 'perms': PermWrapper(<SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x0000014BA7E09800>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'alumnos': <QuerySet [<Alumno:   >, <Alumno: Salvador Allende Gossens>, <Alumno: Jimena Estuardo Uribe>, <Alumno: Vicente Fredes Estuardo>, <Alumno: Rodrigo Fredes Veas>, <Alumno: Gonzalo Muga Escobar>, <Alumno: Caroline Polachek Lisa>, <Alumno: Natalia Pérez Peralta>, <Alumno: Roberto Smith Poole>, <Alumno: Avril Vandella Lavigne>]>}]
+(0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC; args=(); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+"GET /alumnos/crud HTTP/1.1" 200 10087
+"GET /static/css/styles.css HTTP/1.1" 304 0
+(0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC LIMIT 21; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/alumnos_list.html'.
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 880, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python311\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 886, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0000014BA7E09BC0>>, 'request': <WSGIRequest: GET '/alumnos/crud'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x0000014BA7E0A520>>, 'perms': PermWrapper(<SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x0000014BA7E0A520>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'alumnos': <QuerySet [<Alumno:   >, <Alumno: Salvador Allende Gossens>, <Alumno: Jimena Estuardo Uribe>, <Alumno: Vicente Fredes Estuardo>, <Alumno: Rodrigo Fredes Veas>, <Alumno: Gonzalo Muga Escobar>, <Alumno: Caroline Polachek Lisa>, <Alumno: Natalia Pérez Peralta>, <Alumno: Roberto Smith Poole>, <Alumno: Avril Vandella Lavigne>]>}]
+(0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC; args=(); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+"GET /alumnos/crud HTTP/1.1" 200 10087
+"GET /static/css/styles.css HTTP/1.1" 200 2559
+(0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC LIMIT 21; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/alumnos_list.html'.
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 880, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python311\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 886, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 896, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python311\Lib\site-packages\django\template\base.py", line 903, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0000014BA7E0A700>>, 'request': <WSGIRequest: GET '/alumnos/crud'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x0000014BA7E09BC0>>, 'perms': PermWrapper(<SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x0000014BA7E09BC0>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'alumnos': <QuerySet [<Alumno:   >, <Alumno: Salvador Allende Gossens>, <Alumno: Jimena Estuardo Uribe>, <Alumno: Vicente Fredes Estuardo>, <Alumno: Rodrigo Fredes Veas>, <Alumno: Gonzalo Muga Escobar>, <Alumno: Caroline Polachek Lisa>, <Alumno: Natalia Pérez Peralta>, <Alumno: Roberto Smith Poole>, <Alumno: Avril Vandella Lavigne>]>}]
+(0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC; args=(); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+"GET /alumnos/crud HTTP/1.1" 200 10087
+"GET /static/css/styles.css HTTP/1.1" 200 2559
