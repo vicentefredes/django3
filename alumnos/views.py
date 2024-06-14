@@ -84,7 +84,7 @@ def alumnos_findEdit(request, pk):
 
 def alumnosUpdate(request):
     if request.method != "POST":
-        alumnos = Alumno.objects.all()
+        alumnos = Alumno.objects.all().order_by('apellido_paterno')
         context = {'alumnos': alumnos}
         return render(request, 'alumnos/alumnos_list.html', context)
     else:
@@ -140,19 +140,19 @@ def alumnos_del(request, pk):
         else:
             mensaje = f"{alumno.nombre} {alumno.apellido_paterno} {alumno.apellido_materno} ha sido eliminada"
 
-        alumnos = Alumno.objects.all()
+        alumnos = Alumno.objects.all().order_by('apellido_paterno')
         context = {'alumnos': alumnos, 'mensaje': mensaje}
         return render(request, 'alumnos/alumnos_list.html', context)
     
     except:
         mensaje = f"ERROR: el rut {pk} no existe"
-        alumnos = Alumno.objects.all()
+        alumnos = Alumno.objects.all().order_by('apellido_paterno')
         context = {'alumnos': alumnos, 'mensaje': mensaje}
         return render(request, 'alumnos/alumnos_list.html', context)
     
 
 def crud_ramos(request):
-    ramos = Ramo.objects.all().order_by('ramo')
+    ramos = Ramo.objects.all().order_by('escuela', 'ramo')
     context = {'ramos': ramos}
     return render(request, 'alumnos/ramos_list.html', context)
 
@@ -182,10 +182,9 @@ def ramosAdd(request):
         return render(request, 'alumnos/ramos_add.html', context)
 
 def ramos_del(request, pk):
-    mensajes = []
     errores = []
 
-    ramos = Ramo.objects.all()
+    ramos = Ramo.objects.all().order_by('escuela', 'ramo')
 
     try:
         ramo = Ramo.objects.get(id_ramo=pk)
@@ -194,12 +193,12 @@ def ramos_del(request, pk):
 
         if ramo:
             ramo.delete()
-            mensajes.append(f"El ramo {ramo.ramo} ha sido eliminado")
-            context = {'ramos':ramos, 'mensajes':mensajes, 'errores':errores}
+            mensaje = f"El ramo {ramo.ramo} ha sido eliminado"
+            context = {'ramos':ramos, 'mensaje':mensaje, 'errores':errores}
             return render(request, 'alumnos/ramos_list.html', context)
     
     except:
-        ramos = Ramo.objects.all()
+        ramos = Ramo.objects.all().order_by('escuela', 'ramo')
         mensaje = "ERROR: el id no existe"
         context = {'ramos': ramos, 'mensaje': mensaje}
         return render(request, 'alumnos/ramos_list.html', context)
@@ -227,7 +226,7 @@ def ramos_edit(request, pk):
                 return render(request, 'alumnos/ramos_edit.html', context)
         
     except:
-        ramos = Ramo.objects.all()
+        ramos = Ramo.objects.all().order_by('escuela', 'ramo')
         mensaje = "ERROR: el id no existe"
         context = {'ramos': ramos, 'mensaje': mensaje}
         return render(request, 'alumnos/ramos_list.html', context)
@@ -235,7 +234,7 @@ def ramos_edit(request, pk):
 
 
 def crud_secciones(request):
-    secciones = Seccion.objects.all().order_by('codigo_seccion')
+    secciones = Seccion.objects.all().order_by('id_ramo', 'codigo_seccion')
     context = {'secciones': secciones}
     return render(request, 'alumnos/secciones_list.html', context)
 
@@ -265,24 +264,23 @@ def seccionesAdd(request):
         return render(request, 'alumnos/secciones_add.html', context)
 
 def secciones_del(request, pk):
-    mensajes = []
     errores = []
 
-    secciones = Seccion.objects.all()
+    secciones = Seccion.objects.all().order_by('id_ramo', 'codigo_seccion')
 
     try:
-        seccion = Seccion.objects.get(id_ramo=pk)
+        seccion = Seccion.objects.get(id_seccion=pk)
 
         context = {}
 
         if seccion:
             seccion.delete()
-            mensajes.append(f"El ramo {seccion.codigo_seccion} ha sido eliminado")
-            context = {'secciones':secciones, 'mensajes':mensajes, 'errores':errores}
+            mensaje = f"La sección {seccion.codigo_seccion} ha sido eliminada"
+            context = {'secciones':secciones, 'mensaje':mensaje, 'errores':errores}
             return render(request, 'alumnos/secciones_list.html', context)
     
     except:
-        secciones = Seccion.objects.all()
+        secciones = Seccion.objects.all().order_by('id_ramo', 'codigo_seccion')
         mensaje = "ERROR: el id no existe"
         context = {'secciones': secciones, 'mensaje': mensaje}
         return render(request, 'alumnos/secciones_list.html', context)
@@ -297,20 +295,20 @@ def secciones_edit(request, pk):
 
         if seccion:
             if request.method == "POST":
-                form = RamoForm(request.POST, instance=seccion)
+                form = SeccionForm(request.POST, instance=seccion)
                 form.save()
                 mensaje = f"Los datos de la seccion han sido actualizados"
                 context = {'seccion':seccion, 'mensaje':mensaje, 'form':form}
                 return render(request, 'alumnos/secciones_edit.html', context)
             
             else:
-                form = RamoForm(instance=ramo)
+                form = SeccionForm(instance=seccion)
                 mensaje = ""
                 context = {'seccion':seccion, 'mensaje':mensaje, 'form':form}
                 return render(request, 'alumnos/secciones_edit.html', context)
         
     except:
-        secciones = Seccion.objects.all()
+        secciones = Seccion.objects.all().order_by('id_ramo', 'codigo_seccion')
         mensaje = "ERROR: el id no existe"
         context = {'secciones': secciones, 'mensaje': mensaje}
         return render(request, 'alumnos/secciones_list.html', context)

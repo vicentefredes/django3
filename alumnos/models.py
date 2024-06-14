@@ -12,12 +12,12 @@ class Genero(models.Model):
 
 class Alumno(models.Model):
     rut              = models.CharField(primary_key=True, max_length=10)
-    nombre           = models.CharField(max_length=20)
-    apellido_paterno = models.CharField(max_length=20)
-    apellido_materno = models.CharField(max_length=20)
+    nombre           = models.CharField(max_length=20, null=False)
+    apellido_paterno = models.CharField(max_length=20, null=False)
+    apellido_materno = models.CharField(max_length=20, null=False)
     fecha_nacimiento = models.DateField(blank=False, null=False) 
     id_genero        = models.ForeignKey('Genero',on_delete=models.CASCADE, db_column='idGenero')  
-    telefono         = models.CharField(max_length=45)
+    telefono         = models.CharField(max_length=45, null=False)
     email            = models.EmailField(unique=True, max_length=100, blank=True, null=True)
     direccion        = models.CharField(max_length=50, blank=True, null=True)  
     activo           = models.IntegerField()
