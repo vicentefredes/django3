@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Alumno, Genero, Ramo, Seccion
+from django.contrib.auth.decorators import login_required
 
 from .forms import RamoForm, SeccionForm
 
@@ -314,8 +315,13 @@ def secciones_edit(request, pk):
         context = {'secciones': secciones, 'mensaje': mensaje}
         return render(request, 'alumnos/secciones_list.html', context)
 
+@login_required
 def menu(request):
-    request.session["usuario"]= "vfredes"
+    request.session["usuario"]= None
     usuario=request.session["usuario"]
     context={'usuario':usuario}
     return render(request, 'administrador/menu.html', context)
+
+def home(request):
+    context= {}
+    render(request, 'administrador/home.html', context)

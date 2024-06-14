@@ -19,4 +19,5 @@ urlpatterns = [
     path('secciones_edit/<str:pk>', views.secciones_edit, name='secciones_edit'),
     path('secciones_del/<str:pk>', views.secciones_del, name='secciones_del'),
     path('menu', views.menu, name='menu'),
+    path('home', views.home, name='home'),
 ]
