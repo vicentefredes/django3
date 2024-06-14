@@ -17,7 +17,8 @@ def listadoSQL(request):
 
 def crud(request):
     alumnos = Alumno.objects.all().order_by('apellido_paterno')
-    context = {'alumnos':alumnos}
+    usuario=request.session["usuario"]
+    context = {'alumnos':alumnos, 'usuario':usuario}
     return render(request, 'alumnos/alumnos_list.html', context)
 
 def alumnosAdd(request):
@@ -312,3 +313,9 @@ def secciones_edit(request, pk):
         mensaje = "ERROR: el id no existe"
         context = {'secciones': secciones, 'mensaje': mensaje}
         return render(request, 'alumnos/secciones_list.html', context)
+
+def menu(request):
+    request.session["usuario"]= "vfredes"
+    usuario=request.session["usuario"]
+    context={'usuario':usuario}
+    return render(request, 'administrador/menu.html', context)
