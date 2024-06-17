@@ -323,5 +323,5 @@ def menu(request):
     return render(request, 'administrador/menu.html', context)
 
 def home(request):
-    context= {}
-    render(request, 'administrador/home.html', context)
+    context = {}
+    return render(request, 'administrador/home.html', context)

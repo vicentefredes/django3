@@ -2,6 +2,7 @@ from django import forms
 from .models import Ramo, Seccion
 
 from django.forms import ModelForm
+from django.contrib.auth.forms import AuthenticationForm
 
 class RamoForm(ModelForm):
     class Meta:
