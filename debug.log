@@ -73,3 +73,1363 @@ Traceback (most recent call last):
 django.template.base.VariableDoesNotExist: Failed lookup for key [current_year] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B158107A60>>, 'request': <WSGIRequest: GET '/alumnos/crud'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B15821E1E0>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B15821E1E0>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'alumnos': <QuerySet [<Alumno:   >, <Alumno: Salvador Allende Gossens>, <Alumno: Jimena Estuardo Uribe>, <Alumno: Vicente Fredes Estuardo>, <Alumno: Rodrigo Fredes Veas>, <Alumno: Gonzalo Muga Escobar>, <Alumno: Caroline Polachek Lisa>, <Alumno: Natalia Pérez Peralta>, <Alumno: Nicolás Stuardo Huerta>, <Alumno: Avril Vandella Lavigne>]>}]
 "GET /alumnos/crud HTTP/1.1" 200 11721
 "GET /static/css/styles.css HTTP/1.1" 304 0
+File C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\base.html previous mtime: 1718639890.7185233, current mtime: 1718640460.4118152
+C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\base.html notified as changed. Signal results: [(<function template_changed at 0x000002B156D28D60>, True), (<function translation_file_changed at 0x000002B157E0BD80>, None)].
+(0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC LIMIT 21; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/alumnos_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B1581068E0>>, 'request': <WSGIRequest: GET '/alumnos/crud'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581FB1D0>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581FB1D0>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'alumnos': <QuerySet [<Alumno:   >, <Alumno: Salvador Allende Gossens>, <Alumno: Jimena Estuardo Uribe>, <Alumno: Vicente Fredes Estuardo>, <Alumno: Rodrigo Fredes Veas>, <Alumno: Gonzalo Muga Escobar>, <Alumno: Caroline Polachek Lisa>, <Alumno: Natalia Pérez Peralta>, <Alumno: Nicolás Stuardo Huerta>, <Alumno: Avril Vandella Lavigne>]>}, {'block': <Block Node: content. Contents: [<TextNode: '\n    <header>\n      <div '>, <django.template.defaulttags.CommentNode object at 0x000002B1580F59D0>, <TextNode: '\n        <div class="col-'>, <URLNode view_name=''alumnosAdd'' args=[] kwargs={} as=None>, <TextNode: '">Agregar Alumno</a>\n    '>, <IfNode>, <TextNode: '\n    </div>\n\n    <div cla'>, <IfNode>, <TextNode: '    \n        </table>\n   '>]>}]
+(0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC; args=(); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+Exception while resolving variable 'current_year' in template 'alumnos/alumnos_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [current_year] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B1581068E0>>, 'request': <WSGIRequest: GET '/alumnos/crud'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581FB1D0>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581FB1D0>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'alumnos': <QuerySet [<Alumno:   >, <Alumno: Salvador Allende Gossens>, <Alumno: Jimena Estuardo Uribe>, <Alumno: Vicente Fredes Estuardo>, <Alumno: Rodrigo Fredes Veas>, <Alumno: Gonzalo Muga Escobar>, <Alumno: Caroline Polachek Lisa>, <Alumno: Natalia Pérez Peralta>, <Alumno: Nicolás Stuardo Huerta>, <Alumno: Avril Vandella Lavigne>]>}]
+"GET /alumnos/crud HTTP/1.1" 200 11629
+"GET /static/css/styles.css HTTP/1.1" 304 0
+(0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC LIMIT 21; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/alumnos_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B158106E80>>, 'request': <WSGIRequest: GET '/alumnos/crud'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581F9E20>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581F9E20>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'alumnos': <QuerySet [<Alumno:   >, <Alumno: Salvador Allende Gossens>, <Alumno: Jimena Estuardo Uribe>, <Alumno: Vicente Fredes Estuardo>, <Alumno: Rodrigo Fredes Veas>, <Alumno: Gonzalo Muga Escobar>, <Alumno: Caroline Polachek Lisa>, <Alumno: Natalia Pérez Peralta>, <Alumno: Nicolás Stuardo Huerta>, <Alumno: Avril Vandella Lavigne>]>}, {'block': <Block Node: content. Contents: [<TextNode: '\n    <header>\n      <div '>, <django.template.defaulttags.CommentNode object at 0x000002B1580F59D0>, <TextNode: '\n        <div class="col-'>, <URLNode view_name=''alumnosAdd'' args=[] kwargs={} as=None>, <TextNode: '">Agregar Alumno</a>\n    '>, <IfNode>, <TextNode: '\n    </div>\n\n    <div cla'>, <IfNode>, <TextNode: '    \n        </table>\n   '>]>}]
+(0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC; args=(); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+Exception while resolving variable 'current_year' in template 'alumnos/alumnos_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [current_year] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B158106E80>>, 'request': <WSGIRequest: GET '/alumnos/crud'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581F9E20>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581F9E20>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'alumnos': <QuerySet [<Alumno:   >, <Alumno: Salvador Allende Gossens>, <Alumno: Jimena Estuardo Uribe>, <Alumno: Vicente Fredes Estuardo>, <Alumno: Rodrigo Fredes Veas>, <Alumno: Gonzalo Muga Escobar>, <Alumno: Caroline Polachek Lisa>, <Alumno: Natalia Pérez Peralta>, <Alumno: Nicolás Stuardo Huerta>, <Alumno: Avril Vandella Lavigne>]>}]
+"GET /alumnos/crud HTTP/1.1" 200 11629
+"GET /static/img/logo_sinfondo.png HTTP/1.1" 304 0
+"GET /static/css/styles.css HTTP/1.1" 200 3019
+(0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC LIMIT 21; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/alumnos_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B158107560>>, 'request': <WSGIRequest: GET '/alumnos/crud'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581E8D10>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581E8D10>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'alumnos': <QuerySet [<Alumno:   >, <Alumno: Salvador Allende Gossens>, <Alumno: Jimena Estuardo Uribe>, <Alumno: Vicente Fredes Estuardo>, <Alumno: Rodrigo Fredes Veas>, <Alumno: Gonzalo Muga Escobar>, <Alumno: Caroline Polachek Lisa>, <Alumno: Natalia Pérez Peralta>, <Alumno: Nicolás Stuardo Huerta>, <Alumno: Avril Vandella Lavigne>]>}, {'block': <Block Node: content. Contents: [<TextNode: '\n    <header>\n      <div '>, <django.template.defaulttags.CommentNode object at 0x000002B1580F59D0>, <TextNode: '\n        <div class="col-'>, <URLNode view_name=''alumnosAdd'' args=[] kwargs={} as=None>, <TextNode: '">Agregar Alumno</a>\n    '>, <IfNode>, <TextNode: '\n    </div>\n\n    <div cla'>, <IfNode>, <TextNode: '    \n        </table>\n   '>]>}]
+(0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC; args=(); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.016) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+Exception while resolving variable 'current_year' in template 'alumnos/alumnos_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [current_year] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B158107560>>, 'request': <WSGIRequest: GET '/alumnos/crud'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581E8D10>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581E8D10>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'alumnos': <QuerySet [<Alumno:   >, <Alumno: Salvador Allende Gossens>, <Alumno: Jimena Estuardo Uribe>, <Alumno: Vicente Fredes Estuardo>, <Alumno: Rodrigo Fredes Veas>, <Alumno: Gonzalo Muga Escobar>, <Alumno: Caroline Polachek Lisa>, <Alumno: Natalia Pérez Peralta>, <Alumno: Nicolás Stuardo Huerta>, <Alumno: Avril Vandella Lavigne>]>}]
+"GET /alumnos/crud HTTP/1.1" 200 11629
+"GET /static/css/styles.css HTTP/1.1" 200 3019
+File C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\base.html previous mtime: 1718640460.4118152, current mtime: 1718640700.4970603
+C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\base.html notified as changed. Signal results: [(<function template_changed at 0x000002B156D28D60>, True), (<function translation_file_changed at 0x000002B157E0BD80>, None)].
+File C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\base.html previous mtime: 1718640700.4970603, current mtime: 1718640701.9211793
+C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\base.html notified as changed. Signal results: [(<function template_changed at 0x000002B156D28D60>, True), (<function translation_file_changed at 0x000002B157E0BD80>, None)].
+(0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC LIMIT 21; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/alumnos_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B15804C5E0>>, 'request': <WSGIRequest: GET '/alumnos/crud'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581F9E20>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581F9E20>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'alumnos': <QuerySet [<Alumno:   >, <Alumno: Salvador Allende Gossens>, <Alumno: Jimena Estuardo Uribe>, <Alumno: Vicente Fredes Estuardo>, <Alumno: Rodrigo Fredes Veas>, <Alumno: Gonzalo Muga Escobar>, <Alumno: Caroline Polachek Lisa>, <Alumno: Natalia Pérez Peralta>, <Alumno: Nicolás Stuardo Huerta>, <Alumno: Avril Vandella Lavigne>]>}, {'block': <Block Node: content. Contents: [<TextNode: '\n    <header>\n      <div '>, <django.template.defaulttags.CommentNode object at 0x000002B1580F4AD0>, <TextNode: '\n        <div class="col-'>, <URLNode view_name=''alumnosAdd'' args=[] kwargs={} as=None>, <TextNode: '">Agregar Alumno</a>\n    '>, <IfNode>, <TextNode: '\n    </div>\n\n    <div cla'>, <IfNode>, <TextNode: '    \n        </table>\n   '>]>}]
+(0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC; args=(); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+Exception while resolving variable 'current_year' in template 'alumnos/alumnos_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [current_year] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B15804C5E0>>, 'request': <WSGIRequest: GET '/alumnos/crud'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581F9E20>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581F9E20>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'alumnos': <QuerySet [<Alumno:   >, <Alumno: Salvador Allende Gossens>, <Alumno: Jimena Estuardo Uribe>, <Alumno: Vicente Fredes Estuardo>, <Alumno: Rodrigo Fredes Veas>, <Alumno: Gonzalo Muga Escobar>, <Alumno: Caroline Polachek Lisa>, <Alumno: Natalia Pérez Peralta>, <Alumno: Nicolás Stuardo Huerta>, <Alumno: Avril Vandella Lavigne>]>}]
+"GET /alumnos/crud HTTP/1.1" 200 11683
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/css/styles.css HTTP/1.1" 304 0
+(0.000) SELECT "alumnos_ramo"."idRamo", "alumnos_ramo"."ramo", "alumnos_ramo"."creditos", "alumnos_ramo"."escuela" FROM "alumnos_ramo" ORDER BY "alumnos_ramo"."escuela" ASC, "alumnos_ramo"."ramo" ASC LIMIT 21; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/ramos_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B156A93B00>>, 'request': <WSGIRequest: GET '/alumnos/crud_ramos'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002B15804C5E0>>, 'perms': PermWrapper(<SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002B15804C5E0>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud_ramos'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'ramos': <QuerySet [<Ramo: Base de Datos>, <Ramo: Diseño de Prototipos>, <Ramo: Machine Learning>, <Ramo: Programación Web>, <Ramo: Armonía I>, <Ramo: Inglés 001>, <Ramo: Inglés 002>, <Ramo: Portugués 001>]>}]
+(0.000) SELECT "alumnos_ramo"."idRamo", "alumnos_ramo"."ramo", "alumnos_ramo"."creditos", "alumnos_ramo"."escuela" FROM "alumnos_ramo" ORDER BY "alumnos_ramo"."escuela" ASC, "alumnos_ramo"."ramo" ASC; args=(); alias=default
+"GET /alumnos/crud_ramos HTTP/1.1" 200 5843
+"GET /static/img/logodeprueba.jpg HTTP/1.1" 304 0
+File C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\base.html previous mtime: 1718640701.9211793, current mtime: 1718640784.371924
+C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\base.html notified as changed. Signal results: [(<function template_changed at 0x000002B156D28D60>, True), (<function translation_file_changed at 0x000002B157E0BD80>, None)].
+File C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\base.html previous mtime: 1718640784.371924, current mtime: 1718640801.4604893
+C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\base.html notified as changed. Signal results: [(<function template_changed at 0x000002B156D28D60>, True), (<function translation_file_changed at 0x000002B157E0BD80>, None)].
+File C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\base.html previous mtime: 1718640801.4604893, current mtime: 1718640806.3566077
+C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\base.html notified as changed. Signal results: [(<function template_changed at 0x000002B156D28D60>, True), (<function translation_file_changed at 0x000002B157E0BD80>, None)].
+(0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC LIMIT 21; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/alumnos_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B156A93B00>>, 'request': <WSGIRequest: GET '/alumnos/crud'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581F9010>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581F9010>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'alumnos': <QuerySet [<Alumno:   >, <Alumno: Salvador Allende Gossens>, <Alumno: Jimena Estuardo Uribe>, <Alumno: Vicente Fredes Estuardo>, <Alumno: Rodrigo Fredes Veas>, <Alumno: Gonzalo Muga Escobar>, <Alumno: Caroline Polachek Lisa>, <Alumno: Natalia Pérez Peralta>, <Alumno: Nicolás Stuardo Huerta>, <Alumno: Avril Vandella Lavigne>]>}, {'block': <Block Node: content. Contents: [<TextNode: '\n    <header>\n      <div '>, <django.template.defaulttags.CommentNode object at 0x000002B15809FD40>, <TextNode: '\n        <div class="col-'>, <URLNode view_name=''alumnosAdd'' args=[] kwargs={} as=None>, <TextNode: '">Agregar Alumno</a>\n    '>, <IfNode>, <TextNode: '\n    </div>\n\n    <div cla'>, <IfNode>, <TextNode: '    \n        </table>\n   '>]>}]
+(0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC; args=(); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+Exception while resolving variable 'current_year' in template 'alumnos/alumnos_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [current_year] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B156A93B00>>, 'request': <WSGIRequest: GET '/alumnos/crud'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581F9010>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581F9010>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'alumnos': <QuerySet [<Alumno:   >, <Alumno: Salvador Allende Gossens>, <Alumno: Jimena Estuardo Uribe>, <Alumno: Vicente Fredes Estuardo>, <Alumno: Rodrigo Fredes Veas>, <Alumno: Gonzalo Muga Escobar>, <Alumno: Caroline Polachek Lisa>, <Alumno: Natalia Pérez Peralta>, <Alumno: Nicolás Stuardo Huerta>, <Alumno: Avril Vandella Lavigne>]>}]
+"GET /alumnos/crud HTTP/1.1" 200 11691
+"GET /static/css/styles.css HTTP/1.1" 304 0
+(0.000) SELECT "alumnos_seccion"."idSeccion", "alumnos_seccion"."codigo_seccion", "alumnos_seccion"."idRamo" FROM "alumnos_seccion" ORDER BY "alumnos_seccion"."idRamo" ASC, "alumnos_seccion"."codigo_seccion" ASC LIMIT 21; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/secciones_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B1581074C0>>, 'request': <WSGIRequest: GET '/alumnos/crud_secciones'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002B156A93B00>>, 'perms': PermWrapper(<SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002B156A93B00>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud_secciones'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'secciones': <QuerySet [<Seccion: PW_001D>, <Seccion: DP_005D>]>}]
+(0.000) SELECT "alumnos_seccion"."idSeccion", "alumnos_seccion"."codigo_seccion", "alumnos_seccion"."idRamo" FROM "alumnos_seccion" ORDER BY "alumnos_seccion"."idRamo" ASC, "alumnos_seccion"."codigo_seccion" ASC; args=(); alias=default
+(0.000) SELECT "alumnos_ramo"."idRamo", "alumnos_ramo"."ramo", "alumnos_ramo"."creditos", "alumnos_ramo"."escuela" FROM "alumnos_ramo" WHERE "alumnos_ramo"."idRamo" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_ramo"."idRamo", "alumnos_ramo"."ramo", "alumnos_ramo"."creditos", "alumnos_ramo"."escuela" FROM "alumnos_ramo" WHERE "alumnos_ramo"."idRamo" = 5 LIMIT 21; args=(5,); alias=default
+"GET /alumnos/crud_secciones HTTP/1.1" 200 3138
+"GET /static/css/styles.css HTTP/1.1" 304 0
+File C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\base.html previous mtime: 1718640806.3566077, current mtime: 1718641061.1143234
+C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\base.html notified as changed. Signal results: [(<function template_changed at 0x000002B156D28D60>, True), (<function translation_file_changed at 0x000002B157E0BD80>, None)].
+(0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC LIMIT 21; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/alumnos_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B15804FBA0>>, 'request': <WSGIRequest: GET '/alumnos/crud'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1580F4F80>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1580F4F80>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'alumnos': <QuerySet [<Alumno:   >, <Alumno: Salvador Allende Gossens>, <Alumno: Jimena Estuardo Uribe>, <Alumno: Vicente Fredes Estuardo>, <Alumno: Rodrigo Fredes Veas>, <Alumno: Gonzalo Muga Escobar>, <Alumno: Caroline Polachek Lisa>, <Alumno: Natalia Pérez Peralta>, <Alumno: Nicolás Stuardo Huerta>, <Alumno: Avril Vandella Lavigne>]>}, {'block': <Block Node: content. Contents: [<TextNode: '\n    <header>\n      <div '>, <django.template.defaulttags.CommentNode object at 0x000002B1580C2000>, <TextNode: '\n        <div class="col-'>, <URLNode view_name=''alumnosAdd'' args=[] kwargs={} as=None>, <TextNode: '">Agregar Alumno</a>\n    '>, <IfNode>, <TextNode: '\n    </div>\n\n    <div cla'>, <IfNode>, <TextNode: '    \n        </table>\n   '>]>}]
+(0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC; args=(); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+Exception while resolving variable 'current_year' in template 'alumnos/alumnos_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [current_year] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B15804FBA0>>, 'request': <WSGIRequest: GET '/alumnos/crud'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1580F4F80>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1580F4F80>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'alumnos': <QuerySet [<Alumno:   >, <Alumno: Salvador Allende Gossens>, <Alumno: Jimena Estuardo Uribe>, <Alumno: Vicente Fredes Estuardo>, <Alumno: Rodrigo Fredes Veas>, <Alumno: Gonzalo Muga Escobar>, <Alumno: Caroline Polachek Lisa>, <Alumno: Natalia Pérez Peralta>, <Alumno: Nicolás Stuardo Huerta>, <Alumno: Avril Vandella Lavigne>]>}]
+"GET /alumnos/crud HTTP/1.1" 200 11695
+"GET /static/img/logo_sinfondo.png HTTP/1.1" 304 0
+File C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\alumnos_list.html previous mtime: 1718638687.504953, current mtime: 1718641150.8452368
+C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\alumnos_list.html notified as changed. Signal results: [(<function template_changed at 0x000002B156D28D60>, True), (<function translation_file_changed at 0x000002B157E0BD80>, None)].
+File C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\ramos_list.html previous mtime: 1718635860.8647578, current mtime: 1718641158.4781213
+C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\ramos_list.html notified as changed. Signal results: [(<function template_changed at 0x000002B156D28D60>, True), (<function translation_file_changed at 0x000002B157E0BD80>, None)].
+File C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\ramos_list.html previous mtime: 1718641158.4781213, current mtime: 1718641167.9332695
+C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\ramos_list.html notified as changed. Signal results: [(<function template_changed at 0x000002B156D28D60>, True), (<function translation_file_changed at 0x000002B157E0BD80>, None)].
+(0.000) SELECT "alumnos_ramo"."idRamo", "alumnos_ramo"."ramo", "alumnos_ramo"."creditos", "alumnos_ramo"."escuela" FROM "alumnos_ramo" ORDER BY "alumnos_ramo"."escuela" ASC, "alumnos_ramo"."ramo" ASC LIMIT 21; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/ramos_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B158106E80>>, 'request': <WSGIRequest: GET '/alumnos/crud_ramos'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581D7530>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581D7530>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud_ramos'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'ramos': <QuerySet [<Ramo: Base de Datos>, <Ramo: Diseño de Prototipos>, <Ramo: Machine Learning>, <Ramo: Programación Web>, <Ramo: Armonía I>, <Ramo: Inglés 001>, <Ramo: Inglés 002>, <Ramo: Portugués 001>]>}, {'block': <Block Node: content. Contents: [<TextNode: '\n    <header>\n      <div '>, <URLNode view_name=''ramosAdd'' args=[] kwargs={} as=None>, <TextNode: '">Agregar Ramo</a>\n      '>, <IfNode>, <TextNode: '\n    </div>\n\n    <div cla'>, <IfNode>, <TextNode: '    \n        </table>\n   '>]>}]
+(0.000) SELECT "alumnos_ramo"."idRamo", "alumnos_ramo"."ramo", "alumnos_ramo"."creditos", "alumnos_ramo"."escuela" FROM "alumnos_ramo" ORDER BY "alumnos_ramo"."escuela" ASC, "alumnos_ramo"."ramo" ASC; args=(); alias=default
+Exception while resolving variable 'current_year' in template 'alumnos/ramos_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [current_year] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B158106E80>>, 'request': <WSGIRequest: GET '/alumnos/crud_ramos'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581D7530>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581D7530>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud_ramos'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'ramos': <QuerySet [<Ramo: Base de Datos>, <Ramo: Diseño de Prototipos>, <Ramo: Machine Learning>, <Ramo: Programación Web>, <Ramo: Armonía I>, <Ramo: Inglés 001>, <Ramo: Inglés 002>, <Ramo: Portugués 001>]>}]
+"GET /alumnos/crud_ramos HTTP/1.1" 200 7428
+"GET /static/css/styles.css HTTP/1.1" 304 0
+"GET /alumnos/home HTTP/1.1" 200 0
+(0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC LIMIT 21; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/alumnos_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B15804FBA0>>, 'request': <WSGIRequest: GET '/alumnos/crud'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581FBAD0>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581FBAD0>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'alumnos': <QuerySet [<Alumno:   >, <Alumno: Salvador Allende Gossens>, <Alumno: Jimena Estuardo Uribe>, <Alumno: Vicente Fredes Estuardo>, <Alumno: Rodrigo Fredes Veas>, <Alumno: Gonzalo Muga Escobar>, <Alumno: Caroline Polachek Lisa>, <Alumno: Natalia Pérez Peralta>, <Alumno: Nicolás Stuardo Huerta>, <Alumno: Avril Vandella Lavigne>]>}, {'block': <Block Node: content. Contents: [<TextNode: '\n    <header>\n      <div '>, <URLNode view_name=''alumnosAdd'' args=[] kwargs={} as=None>, <TextNode: '">Agregar Alumno</a>\n    '>, <IfNode>, <TextNode: '\n    </div>\n\n    <div cla'>, <IfNode>, <TextNode: '    \n        </table>\n   '>]>}]
+(0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC; args=(); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+Exception while resolving variable 'current_year' in template 'alumnos/alumnos_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [current_year] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B15804FBA0>>, 'request': <WSGIRequest: GET '/alumnos/crud'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581FBAD0>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581FBAD0>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'alumnos': <QuerySet [<Alumno:   >, <Alumno: Salvador Allende Gossens>, <Alumno: Jimena Estuardo Uribe>, <Alumno: Vicente Fredes Estuardo>, <Alumno: Rodrigo Fredes Veas>, <Alumno: Gonzalo Muga Escobar>, <Alumno: Caroline Polachek Lisa>, <Alumno: Natalia Pérez Peralta>, <Alumno: Nicolás Stuardo Huerta>, <Alumno: Avril Vandella Lavigne>]>}]
+"GET /alumnos/crud HTTP/1.1" 200 11686
+File C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\secciones_list.html previous mtime: 1718635860.8667648, current mtime: 1718641262.0792036
+C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\secciones_list.html notified as changed. Signal results: [(<function template_changed at 0x000002B156D28D60>, True), (<function translation_file_changed at 0x000002B157E0BD80>, None)].
+File C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\secciones_list.html previous mtime: 1718641262.0792036, current mtime: 1718641271.2475214
+C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\secciones_list.html notified as changed. Signal results: [(<function template_changed at 0x000002B156D28D60>, True), (<function translation_file_changed at 0x000002B157E0BD80>, None)].
+(0.000) SELECT "alumnos_seccion"."idSeccion", "alumnos_seccion"."codigo_seccion", "alumnos_seccion"."idRamo" FROM "alumnos_seccion" ORDER BY "alumnos_seccion"."idRamo" ASC, "alumnos_seccion"."codigo_seccion" ASC LIMIT 21; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/secciones_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B15804FBA0>>, 'request': <WSGIRequest: GET '/alumnos/crud_secciones'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1580F67B0>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1580F67B0>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud_secciones'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'secciones': <QuerySet [<Seccion: PW_001D>, <Seccion: DP_005D>]>}, {'block': <Block Node: content. Contents: [<TextNode: '\n    <header>\n      <div '>, <URLNode view_name=''seccionesAdd'' args=[] kwargs={} as=None>, <TextNode: '">Agregar Sección</a>\n   '>, <IfNode>, <TextNode: '\n    </div>\n\n    <div cla'>, <IfNode>, <TextNode: '    \n        </table>\n   '>]>}]
+(0.000) SELECT "alumnos_seccion"."idSeccion", "alumnos_seccion"."codigo_seccion", "alumnos_seccion"."idRamo" FROM "alumnos_seccion" ORDER BY "alumnos_seccion"."idRamo" ASC, "alumnos_seccion"."codigo_seccion" ASC; args=(); alias=default
+(0.000) SELECT "alumnos_ramo"."idRamo", "alumnos_ramo"."ramo", "alumnos_ramo"."creditos", "alumnos_ramo"."escuela" FROM "alumnos_ramo" WHERE "alumnos_ramo"."idRamo" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_ramo"."idRamo", "alumnos_ramo"."ramo", "alumnos_ramo"."creditos", "alumnos_ramo"."escuela" FROM "alumnos_ramo" WHERE "alumnos_ramo"."idRamo" = 5 LIMIT 21; args=(5,); alias=default
+Exception while resolving variable 'current_year' in template 'alumnos/secciones_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [current_year] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B15804FBA0>>, 'request': <WSGIRequest: GET '/alumnos/crud_secciones'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1580F67B0>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1580F67B0>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud_secciones'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'secciones': <QuerySet [<Seccion: PW_001D>, <Seccion: DP_005D>]>}]
+"GET /alumnos/crud_secciones HTTP/1.1" 200 4702
+"GET /static/css/styles.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+(0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC LIMIT 21; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/alumnos_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B157FF2480>>, 'request': <WSGIRequest: GET '/alumnos/crud'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581D66C0>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581D66C0>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'alumnos': <QuerySet [<Alumno:   >, <Alumno: Salvador Allende Gossens>, <Alumno: Jimena Estuardo Uribe>, <Alumno: Vicente Fredes Estuardo>, <Alumno: Rodrigo Fredes Veas>, <Alumno: Gonzalo Muga Escobar>, <Alumno: Caroline Polachek Lisa>, <Alumno: Natalia Pérez Peralta>, <Alumno: Nicolás Stuardo Huerta>, <Alumno: Avril Vandella Lavigne>]>}, {'block': <Block Node: content. Contents: [<TextNode: '\n    <header>\n      <div '>, <URLNode view_name=''alumnosAdd'' args=[] kwargs={} as=None>, <TextNode: '">Agregar Alumno</a>\n    '>, <IfNode>, <TextNode: '\n    </div>\n\n    <div cla'>, <IfNode>, <TextNode: '    \n        </table>\n   '>]>}]
+(0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC; args=(); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+Exception while resolving variable 'current_year' in template 'alumnos/alumnos_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [current_year] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B157FF2480>>, 'request': <WSGIRequest: GET '/alumnos/crud'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581D66C0>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581D66C0>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'alumnos': <QuerySet [<Alumno:   >, <Alumno: Salvador Allende Gossens>, <Alumno: Jimena Estuardo Uribe>, <Alumno: Vicente Fredes Estuardo>, <Alumno: Rodrigo Fredes Veas>, <Alumno: Gonzalo Muga Escobar>, <Alumno: Caroline Polachek Lisa>, <Alumno: Natalia Pérez Peralta>, <Alumno: Nicolás Stuardo Huerta>, <Alumno: Avril Vandella Lavigne>]>}]
+"GET /alumnos/crud HTTP/1.1" 200 11686
+(0.000) SELECT "alumnos_ramo"."idRamo", "alumnos_ramo"."ramo", "alumnos_ramo"."creditos", "alumnos_ramo"."escuela" FROM "alumnos_ramo" ORDER BY "alumnos_ramo"."escuela" ASC, "alumnos_ramo"."ramo" ASC LIMIT 21; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/ramos_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B1581079C0>>, 'request': <WSGIRequest: GET '/alumnos/crud_ramos'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B15821E9C0>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B15821E9C0>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud_ramos'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'ramos': <QuerySet [<Ramo: Base de Datos>, <Ramo: Diseño de Prototipos>, <Ramo: Machine Learning>, <Ramo: Programación Web>, <Ramo: Armonía I>, <Ramo: Inglés 001>, <Ramo: Inglés 002>, <Ramo: Portugués 001>]>}, {'block': <Block Node: content. Contents: [<TextNode: '\n    <header>\n      <div '>, <URLNode view_name=''ramosAdd'' args=[] kwargs={} as=None>, <TextNode: '">Agregar Ramo</a>\n      '>, <IfNode>, <TextNode: '\n    </div>\n\n    <div cla'>, <IfNode>, <TextNode: '    \n        </table>\n   '>]>}]
+(0.000) SELECT "alumnos_ramo"."idRamo", "alumnos_ramo"."ramo", "alumnos_ramo"."creditos", "alumnos_ramo"."escuela" FROM "alumnos_ramo" ORDER BY "alumnos_ramo"."escuela" ASC, "alumnos_ramo"."ramo" ASC; args=(); alias=default
+Exception while resolving variable 'current_year' in template 'alumnos/ramos_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [current_year] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B1581079C0>>, 'request': <WSGIRequest: GET '/alumnos/crud_ramos'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B15821E9C0>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B15821E9C0>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud_ramos'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'ramos': <QuerySet [<Ramo: Base de Datos>, <Ramo: Diseño de Prototipos>, <Ramo: Machine Learning>, <Ramo: Programación Web>, <Ramo: Armonía I>, <Ramo: Inglés 001>, <Ramo: Inglés 002>, <Ramo: Portugués 001>]>}]
+"GET /alumnos/crud_ramos HTTP/1.1" 200 7428
+(0.000) SELECT "alumnos_seccion"."idSeccion", "alumnos_seccion"."codigo_seccion", "alumnos_seccion"."idRamo" FROM "alumnos_seccion" ORDER BY "alumnos_seccion"."idRamo" ASC, "alumnos_seccion"."codigo_seccion" ASC LIMIT 21; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/secciones_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B1581072E0>>, 'request': <WSGIRequest: GET '/alumnos/crud_secciones'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B15821E060>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B15821E060>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud_secciones'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'secciones': <QuerySet [<Seccion: PW_001D>, <Seccion: DP_005D>]>}, {'block': <Block Node: content. Contents: [<TextNode: '\n    <header>\n      <div '>, <URLNode view_name=''seccionesAdd'' args=[] kwargs={} as=None>, <TextNode: '">Agregar Sección</a>\n   '>, <IfNode>, <TextNode: '\n    </div>\n\n    <div cla'>, <IfNode>, <TextNode: '    \n        </table>\n   '>]>}]
+(0.000) SELECT "alumnos_seccion"."idSeccion", "alumnos_seccion"."codigo_seccion", "alumnos_seccion"."idRamo" FROM "alumnos_seccion" ORDER BY "alumnos_seccion"."idRamo" ASC, "alumnos_seccion"."codigo_seccion" ASC; args=(); alias=default
+(0.000) SELECT "alumnos_ramo"."idRamo", "alumnos_ramo"."ramo", "alumnos_ramo"."creditos", "alumnos_ramo"."escuela" FROM "alumnos_ramo" WHERE "alumnos_ramo"."idRamo" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_ramo"."idRamo", "alumnos_ramo"."ramo", "alumnos_ramo"."creditos", "alumnos_ramo"."escuela" FROM "alumnos_ramo" WHERE "alumnos_ramo"."idRamo" = 5 LIMIT 21; args=(5,); alias=default
+Exception while resolving variable 'current_year' in template 'alumnos/secciones_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [current_year] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B1581072E0>>, 'request': <WSGIRequest: GET '/alumnos/crud_secciones'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B15821E060>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B15821E060>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud_secciones'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'secciones': <QuerySet [<Seccion: PW_001D>, <Seccion: DP_005D>]>}]
+"GET /alumnos/crud_secciones HTTP/1.1" 200 4702
+(0.000) SELECT "alumnos_ramo"."idRamo", "alumnos_ramo"."ramo", "alumnos_ramo"."creditos", "alumnos_ramo"."escuela" FROM "alumnos_ramo"; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/secciones_add.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'OfLlJk9kNlVwwItUvWJCl4IVgjm4dGoIPIRnHJMoqkEmBWratTZKKTDi6mgPF2Ap'>, 'request': <WSGIRequest: GET '/alumnos/seccionesAdd'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002B157FF2480>>, 'perms': PermWrapper(<SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002B157FF2480>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/seccionesAdd'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <SeccionForm bound=False, valid=False, fields=(codigo_seccion;id_ramo)>}]
+"GET /alumnos/seccionesAdd HTTP/1.1" 200 3430
+"GET /static/img/logodeprueba.jpg HTTP/1.1" 304 0
+(0.000) SELECT "alumnos_seccion"."idSeccion", "alumnos_seccion"."codigo_seccion", "alumnos_seccion"."idRamo" FROM "alumnos_seccion" ORDER BY "alumnos_seccion"."idRamo" ASC, "alumnos_seccion"."codigo_seccion" ASC LIMIT 21; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/secciones_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B158106840>>, 'request': <WSGIRequest: GET '/alumnos/crud_secciones'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1582ACCB0>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1582ACCB0>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud_secciones'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'secciones': <QuerySet [<Seccion: PW_001D>, <Seccion: DP_005D>]>}, {'block': <Block Node: content. Contents: [<TextNode: '\n    <header>\n      <div '>, <URLNode view_name=''seccionesAdd'' args=[] kwargs={} as=None>, <TextNode: '">Agregar Sección</a>\n   '>, <IfNode>, <TextNode: '\n    </div>\n\n    <div cla'>, <IfNode>, <TextNode: '    \n        </table>\n   '>]>}]
+(0.000) SELECT "alumnos_seccion"."idSeccion", "alumnos_seccion"."codigo_seccion", "alumnos_seccion"."idRamo" FROM "alumnos_seccion" ORDER BY "alumnos_seccion"."idRamo" ASC, "alumnos_seccion"."codigo_seccion" ASC; args=(); alias=default
+(0.000) SELECT "alumnos_ramo"."idRamo", "alumnos_ramo"."ramo", "alumnos_ramo"."creditos", "alumnos_ramo"."escuela" FROM "alumnos_ramo" WHERE "alumnos_ramo"."idRamo" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_ramo"."idRamo", "alumnos_ramo"."ramo", "alumnos_ramo"."creditos", "alumnos_ramo"."escuela" FROM "alumnos_ramo" WHERE "alumnos_ramo"."idRamo" = 5 LIMIT 21; args=(5,); alias=default
+Exception while resolving variable 'current_year' in template 'alumnos/secciones_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'current_year'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [current_year] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B158106840>>, 'request': <WSGIRequest: GET '/alumnos/crud_secciones'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1582ACCB0>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1582ACCB0>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud_secciones'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'secciones': <QuerySet [<Seccion: PW_001D>, <Seccion: DP_005D>]>}]
+"GET /alumnos/crud_secciones HTTP/1.1" 200 4702
+"GET /alumnos/home HTTP/1.1" 200 0
+File C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\base.html previous mtime: 1718641061.1143234, current mtime: 1718641360.5931659
+C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\base.html notified as changed. Signal results: [(<function template_changed at 0x000002B156D28D60>, True), (<function translation_file_changed at 0x000002B157E0BD80>, None)].
+File C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\base.html previous mtime: 1718641360.5931659, current mtime: 1718641364.1617165
+C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\base.html notified as changed. Signal results: [(<function template_changed at 0x000002B156D28D60>, True), (<function translation_file_changed at 0x000002B157E0BD80>, None)].
+(0.000) SELECT "alumnos_seccion"."idSeccion", "alumnos_seccion"."codigo_seccion", "alumnos_seccion"."idRamo" FROM "alumnos_seccion" ORDER BY "alumnos_seccion"."idRamo" ASC, "alumnos_seccion"."codigo_seccion" ASC LIMIT 21; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/secciones_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B1581076A0>>, 'request': <WSGIRequest: GET '/alumnos/crud_secciones'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B15821D670>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B15821D670>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud_secciones'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'secciones': <QuerySet [<Seccion: PW_001D>, <Seccion: DP_005D>]>}, {'block': <Block Node: content. Contents: [<TextNode: '\n    <header>\n      <div '>, <URLNode view_name=''seccionesAdd'' args=[] kwargs={} as=None>, <TextNode: '">Agregar Sección</a>\n   '>, <IfNode>, <TextNode: '\n    </div>\n\n    <div cla'>, <IfNode>, <TextNode: '    \n        </table>\n   '>]>}]
+(0.000) SELECT "alumnos_seccion"."idSeccion", "alumnos_seccion"."codigo_seccion", "alumnos_seccion"."idRamo" FROM "alumnos_seccion" ORDER BY "alumnos_seccion"."idRamo" ASC, "alumnos_seccion"."codigo_seccion" ASC; args=(); alias=default
+(0.000) SELECT "alumnos_ramo"."idRamo", "alumnos_ramo"."ramo", "alumnos_ramo"."creditos", "alumnos_ramo"."escuela" FROM "alumnos_ramo" WHERE "alumnos_ramo"."idRamo" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_ramo"."idRamo", "alumnos_ramo"."ramo", "alumnos_ramo"."creditos", "alumnos_ramo"."escuela" FROM "alumnos_ramo" WHERE "alumnos_ramo"."idRamo" = 5 LIMIT 21; args=(5,); alias=default
+"GET /alumnos/crud_secciones HTTP/1.1" 200 4705
+"GET /static/css/styles.css HTTP/1.1" 304 0
+"GET /static/img/logo_sinfondo.png HTTP/1.1" 304 0
+File C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\base.html previous mtime: 1718641364.1617165, current mtime: 1718641371.073354
+C:\Users\plazavespucio\Desktop\django3\alumnos\templates\alumnos\base.html notified as changed. Signal results: [(<function template_changed at 0x000002B156D28D60>, True), (<function translation_file_changed at 0x000002B157E0BD80>, None)].
+(0.000) SELECT "alumnos_seccion"."idSeccion", "alumnos_seccion"."codigo_seccion", "alumnos_seccion"."idRamo" FROM "alumnos_seccion" ORDER BY "alumnos_seccion"."idRamo" ASC, "alumnos_seccion"."codigo_seccion" ASC LIMIT 21; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/secciones_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B158107060>>, 'request': <WSGIRequest: GET '/alumnos/crud_secciones'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B15821F440>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B15821F440>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud_secciones'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'secciones': <QuerySet [<Seccion: PW_001D>, <Seccion: DP_005D>]>}, {'block': <Block Node: content. Contents: [<TextNode: '\n    <header>\n      <div '>, <URLNode view_name=''seccionesAdd'' args=[] kwargs={} as=None>, <TextNode: '">Agregar Sección</a>\n   '>, <IfNode>, <TextNode: '\n    </div>\n\n    <div cla'>, <IfNode>, <TextNode: '    \n        </table>\n   '>]>}]
+(0.000) SELECT "alumnos_seccion"."idSeccion", "alumnos_seccion"."codigo_seccion", "alumnos_seccion"."idRamo" FROM "alumnos_seccion" ORDER BY "alumnos_seccion"."idRamo" ASC, "alumnos_seccion"."codigo_seccion" ASC; args=(); alias=default
+(0.000) SELECT "alumnos_ramo"."idRamo", "alumnos_ramo"."ramo", "alumnos_ramo"."creditos", "alumnos_ramo"."escuela" FROM "alumnos_ramo" WHERE "alumnos_ramo"."idRamo" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_ramo"."idRamo", "alumnos_ramo"."ramo", "alumnos_ramo"."creditos", "alumnos_ramo"."escuela" FROM "alumnos_ramo" WHERE "alumnos_ramo"."idRamo" = 5 LIMIT 21; args=(5,); alias=default
+"GET /alumnos/crud_secciones HTTP/1.1" 200 4706
+(0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC LIMIT 21; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/alumnos_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B158107380>>, 'request': <WSGIRequest: GET '/alumnos/crud'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581FA8D0>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B1581FA8D0>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'alumnos': <QuerySet [<Alumno:   >, <Alumno: Salvador Allende Gossens>, <Alumno: Jimena Estuardo Uribe>, <Alumno: Vicente Fredes Estuardo>, <Alumno: Rodrigo Fredes Veas>, <Alumno: Gonzalo Muga Escobar>, <Alumno: Caroline Polachek Lisa>, <Alumno: Natalia Pérez Peralta>, <Alumno: Nicolás Stuardo Huerta>, <Alumno: Avril Vandella Lavigne>]>}, {'block': <Block Node: content. Contents: [<TextNode: '\n    <header>\n      <div '>, <URLNode view_name=''alumnosAdd'' args=[] kwargs={} as=None>, <TextNode: '">Agregar Alumno</a>\n    '>, <IfNode>, <TextNode: '\n    </div>\n\n    <div cla'>, <IfNode>, <TextNode: '    \n        </table>\n   '>]>}]
+(0.000) SELECT "alumnos_alumno"."rut", "alumnos_alumno"."nombre", "alumnos_alumno"."apellido_paterno", "alumnos_alumno"."apellido_materno", "alumnos_alumno"."fecha_nacimiento", "alumnos_alumno"."idGenero", "alumnos_alumno"."telefono", "alumnos_alumno"."email", "alumnos_alumno"."direccion", "alumnos_alumno"."activo" FROM "alumnos_alumno" ORDER BY "alumnos_alumno"."apellido_paterno" ASC; args=(); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 1 LIMIT 21; args=(1,); alias=default
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero" WHERE "alumnos_genero"."idGenero" = 2 LIMIT 21; args=(2,); alias=default
+"GET /alumnos/crud HTTP/1.1" 200 11690
+(0.000) SELECT "alumnos_genero"."idGenero", "alumnos_genero"."genero" FROM "alumnos_genero"; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/alumnos_add.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'dJxTxYH6VMQ7k2Mx3JwTyGm455SuqivEecDVvnkayLzXpgKN1GM1XvhrV8MfSEHl'>, 'request': <WSGIRequest: GET '/alumnos/alumnosAdd'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002B157FF2480>>, 'perms': PermWrapper(<SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002B157FF2480>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/alumnosAdd'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'generos': <QuerySet [<Genero: Masculino>, <Genero: Femenino>]>}]
+"GET /alumnos/alumnosAdd HTTP/1.1" 200 5282
+Exception while resolving variable 'mensaje' in template 'registration/login.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'kadlJRz0THsc0TKrWrt3uqzMfmujuhFelDjnHgc4wGb257IHUoJbTfu95po4WDRV'>, 'request': <WSGIRequest: GET '/accounts/login/'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002B1581076A0>>, 'perms': PermWrapper(<SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002B1581076A0>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/accounts/login/'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <AuthenticationForm bound=False, valid=False, fields=(username;password)>, 'view': <django.contrib.auth.views.LoginView object at 0x000002B1580C2120>, 'next': '', 'site': <django.contrib.sites.requests.RequestSite object at 0x000002B1580C37D0>, 'site_name': '127.0.0.1:8000'}]
+"GET /accounts/login/ HTTP/1.1" 200 2944
+"GET /static/css/styles.css HTTP/1.1" 304 0
+"GET /static/js/main.js HTTP/1.1" 304 0
+"GET /static/img/logodeprueba.jpg HTTP/1.1" 304 0
+(0.000) SELECT "alumnos_seccion"."idSeccion", "alumnos_seccion"."codigo_seccion", "alumnos_seccion"."idRamo" FROM "alumnos_seccion" ORDER BY "alumnos_seccion"."idRamo" ASC, "alumnos_seccion"."codigo_seccion" ASC LIMIT 21; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/secciones_list.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x000002B158104F40>>, 'request': <WSGIRequest: GET '/alumnos/crud_secciones'>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B15821FC80>>, 'perms': PermWrapper(<SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x000002B15821FC80>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/crud_secciones'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'secciones': <QuerySet [<Seccion: PW_001D>, <Seccion: DP_005D>]>}, {'block': <Block Node: content. Contents: [<TextNode: '\n    <header>\n      <div '>, <URLNode view_name=''seccionesAdd'' args=[] kwargs={} as=None>, <TextNode: '">Agregar Sección</a>\n   '>, <IfNode>, <TextNode: '\n    </div>\n\n    <div cla'>, <IfNode>, <TextNode: '    \n        </table>\n   '>]>}]
+(0.000) SELECT "alumnos_seccion"."idSeccion", "alumnos_seccion"."codigo_seccion", "alumnos_seccion"."idRamo" FROM "alumnos_seccion" ORDER BY "alumnos_seccion"."idRamo" ASC, "alumnos_seccion"."codigo_seccion" ASC; args=(); alias=default
+(0.000) SELECT "alumnos_ramo"."idRamo", "alumnos_ramo"."ramo", "alumnos_ramo"."creditos", "alumnos_ramo"."escuela" FROM "alumnos_ramo" WHERE "alumnos_ramo"."idRamo" = 2 LIMIT 21; args=(2,); alias=default
+(0.000) SELECT "alumnos_ramo"."idRamo", "alumnos_ramo"."ramo", "alumnos_ramo"."creditos", "alumnos_ramo"."escuela" FROM "alumnos_ramo" WHERE "alumnos_ramo"."idRamo" = 5 LIMIT 21; args=(5,); alias=default
+"GET /alumnos/crud_secciones HTTP/1.1" 200 4706
+"GET /static/img/logo_sinfondo.png HTTP/1.1" 304 0
+(0.000) SELECT "alumnos_ramo"."idRamo", "alumnos_ramo"."ramo", "alumnos_ramo"."creditos", "alumnos_ramo"."escuela" FROM "alumnos_ramo"; args=(); alias=default
+Exception while resolving variable 'mensaje' in template 'alumnos/secciones_add.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'LM7P4pdt6k9Uctj1HNnpGsi06FYelH8IMfdR2OQxJjSKhHhhFKDx5hdnWISZN3kp'>, 'request': <WSGIRequest: GET '/alumnos/seccionesAdd'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002B158104F40>>, 'perms': PermWrapper(<SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002B158104F40>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/alumnos/seccionesAdd'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <SeccionForm bound=False, valid=False, fields=(codigo_seccion;id_ramo)>}]
+"GET /alumnos/seccionesAdd HTTP/1.1" 200 3430
+Exception while resolving variable 'mensaje' in template 'registration/login.html'.
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 875, in _resolve_lookup
+    current = current[bit]
+              ~~~~~~~^^^^^
+  File "C:\Python312\Lib\site-packages\django\template\context.py", line 83, in __getitem__
+    raise KeyError(key)
+KeyError: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 881, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(
+                                            ^^^^^^^^
+AttributeError: type object 'RequestContext' has no attribute 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = current[int(bit)]
+                      ^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'mensaje'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python312\Lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    raise VariableDoesNotExist(
+django.template.base.VariableDoesNotExist: Failed lookup for key [mensaje] in [{'True': True, 'False': False, 'None': None}, {'csrf_token': <SimpleLazyObject: 'UJmDwtI1t10SswD3kiDaqFgNzZl3bbCKVcsFuSl560JIxKBjifTiPubap2fODxOr'>, 'request': <WSGIRequest: GET '/accounts/login/'>, 'user': <SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002B157FF2480>>, 'perms': PermWrapper(<SimpleLazyObject: <function AuthenticationMiddleware.process_request.<locals>.<lambda> at 0x000002B157FF2480>>), 'messages': <FallbackStorage: request=<WSGIRequest: GET '/accounts/login/'>>, 'DEFAULT_MESSAGE_LEVELS': {'DEBUG': 10, 'INFO': 20, 'SUCCESS': 25, 'WARNING': 30, 'ERROR': 40}}, {}, {'form': <AuthenticationForm bound=False, valid=False, fields=(username;password)>, 'view': <django.contrib.auth.views.LoginView object at 0x000002B1580C2A80>, 'next': '', 'site': <django.contrib.sites.requests.RequestSite object at 0x000002B1582AF380>, 'site_name': '127.0.0.1:8000'}]
+"GET /accounts/login/ HTTP/1.1" 200 2944
+"GET /alumnos/home HTTP/1.1" 200 0
