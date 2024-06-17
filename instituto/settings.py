@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 LOGIN_REDIRECT_URL = "menu"
-LOGOUT_REDIRECT_URL = "login"
+LOGOUT_REDIRECT_URL = "home"
 
 WSGI_APPLICATION = 'instituto.wsgi.application'
 

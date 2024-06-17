@@ -18,8 +18,7 @@ def listadoSQL(request):
 
 def crud(request):
     alumnos = Alumno.objects.all().order_by('apellido_paterno')
-    usuario=request.session["usuario"]
-    context = {'alumnos':alumnos, 'usuario':usuario}
+    context = {'alumnos':alumnos}
     return render(request, 'alumnos/alumnos_list.html', context)
 
 def alumnosAdd(request):
